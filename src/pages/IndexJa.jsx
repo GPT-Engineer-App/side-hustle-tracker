@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Container, VStack, HStack, Text, Button, Input, Select, Table, Thead, Tbody, Tr, Th, Td, IconButton } from "@chakra-ui/react";
 import { FaEdit, FaTrash } from "react-icons/fa";
 
-const Index = () => {
+const IndexJa = () => {
   const [transactions, setTransactions] = useState([
-    { id: 1, date: '2023-10-01', amount: 200, type: 'Income', category: 'Nike' },
-    { id: 2, date: '2023-10-02', amount: 150, type: 'Expense', category: 'Adidas' },
+    { id: 1, date: '2023-10-01', amount: 200, type: '収入', category: 'ナイキ' },
+    { id: 2, date: '2023-10-02', amount: 150, type: '支出', category: 'アディダス' },
   ]);
 
   const [form, setForm] = useState({ date: '', amount: '', type: '', category: '' });
@@ -47,14 +47,14 @@ const Index = () => {
           <Input placeholder="日付" name="date" value={form.date} onChange={handleChange} />
           <Input placeholder="金額" name="amount" value={form.amount} onChange={handleChange} />
           <Select placeholder="タイプ" name="type" value={form.type} onChange={handleChange}>
-            <option value="Income">収入</option>
-            <option value="Expense">支出</option>
+            <option value="収入">収入</option>
+            <option value="支出">支出</option>
           </Select>
           <Select placeholder="カテゴリー" name="category" value={form.category} onChange={handleChange}>
-            <option value="Nike">ナイキ</option>
-            <option value="Adidas">アディダス</option>
-            <option value="Puma">プーマ</option>
-            <option value="Reebok">リーボック</option>
+            <option value="ナイキ">ナイキ</option>
+            <option value="アディダス">アディダス</option>
+            <option value="プーマ">プーマ</option>
+            <option value="リーボック">リーボック</option>
           </Select>
           <Button onClick={handleAddTransaction}>{isEditing ? '更新' : '追加'}</Button>
         </HStack>
@@ -90,4 +90,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default IndexJa;
