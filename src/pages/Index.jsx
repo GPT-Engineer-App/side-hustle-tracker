@@ -42,30 +42,30 @@ const Index = () => {
   return (
     <Container centerContent maxW="container.md" py={10}>
       <VStack spacing={4} width="100%">
-        <Text fontSize="2xl">Sneaker Accounting App</Text>
+        <Text fontSize="2xl">スニーカー会計アプリ</Text>
         <HStack spacing={4} width="100%">
-          <Input placeholder="Date" name="date" value={form.date} onChange={handleChange} />
-          <Input placeholder="Amount" name="amount" value={form.amount} onChange={handleChange} />
-          <Select placeholder="Type" name="type" value={form.type} onChange={handleChange}>
-            <option value="Income">Income</option>
-            <option value="Expense">Expense</option>
+          <Input placeholder="日付" name="date" value={form.date} onChange={handleChange} />
+          <Input placeholder="金額" name="amount" value={form.amount} onChange={handleChange} />
+          <Select placeholder="タイプ" name="type" value={form.type} onChange={handleChange}>
+            <option value="Income">収入</option>
+            <option value="Expense">支出</option>
           </Select>
-          <Select placeholder="Category" name="category" value={form.category} onChange={handleChange}>
-            <option value="Nike">Nike</option>
-            <option value="Adidas">Adidas</option>
-            <option value="Puma">Puma</option>
-            <option value="Reebok">Reebok</option>
+          <Select placeholder="カテゴリー" name="category" value={form.category} onChange={handleChange}>
+            <option value="Nike">ナイキ</option>
+            <option value="Adidas">アディダス</option>
+            <option value="Puma">プーマ</option>
+            <option value="Reebok">リーボック</option>
           </Select>
-          <Button onClick={handleAddTransaction}>{isEditing ? 'Update' : 'Add'}</Button>
+          <Button onClick={handleAddTransaction}>{isEditing ? '更新' : '追加'}</Button>
         </HStack>
         <Table variant="simple" width="100%">
           <Thead>
             <Tr>
-              <Th>Date</Th>
-              <Th>Amount</Th>
-              <Th>Type</Th>
-              <Th>Category</Th>
-              <Th>Actions</Th>
+              <Th>日付</Th>
+              <Th>金額</Th>
+              <Th>タイプ</Th>
+              <Th>カテゴリー</Th>
+              <Th>アクション</Th>
             </Tr>
           </Thead>
           <Tbody>
